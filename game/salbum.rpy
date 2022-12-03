@@ -40,7 +40,7 @@ init python:
         renpy.notify(_(f"Unlocked Photo Fragment: {message}"))
         unlockPhotoFragment(name, fragment)
 
-    class TPhoto:
+    class SPhoto:
         def __init__(self, name, title, thumbnail, nfragments):
             self.name = name
             self.title = title
@@ -52,7 +52,7 @@ init python:
             self.photos = []
 
         def addPhoto(self, name, title, thumbnail, nfragments):
-            self.photos.append(TPhoto(name, title, thumbnail, nfragments))
+            self.photos.append(SPhoto(name, title, thumbnail, nfragments))
 
         def addPhotos(self, data):
             for d in data:
